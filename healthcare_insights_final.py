@@ -7,12 +7,12 @@ Original file is located at
     https://colab.research.google.com/drive/1MSiny1wuWHe2tks69K9GYmOe_Ia_Fcaf
 """
 
-!pip install streamlit
-!pip install pandas
-!pip install numpy
-!pip install matplotlib
-!pip install seaborn
-!pip install sqlite3
+# !pip install streamlit
+# !pip install pandas
+# !pip install numpy
+# !pip install matplotlib
+# !pip install seaborn
+# !pip install sqlite3
 
 # Import necessary libraries
 import pandas as pd
