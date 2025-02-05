@@ -7,13 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1MSiny1wuWHe2tks69K9GYmOe_Ia_Fcaf
 """
 
-# !pip3 install streamlit
-# !pip3 install pandas
-# !pip3 install numpy
-uv install matplotlib
-uv install seaborn
-uv install sqlite3
-
 # Import necessary libraries
 import pandas as pd
 import numpy as np
