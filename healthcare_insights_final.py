@@ -210,7 +210,7 @@ elif selected_query == "Length of Stay Statistics":
   st.subheader("Length of Stay Statistics")
   st.write(df_length_of_stay)
 
-elif selected_query == "Top 10 Doctors":
+elif selected_query == "Top Doctors":
   query = '''SELECT Doctor, COUNT(*) as total_patients
             FROM all_data
             GROUP BY Doctor
@@ -223,7 +223,7 @@ elif selected_query == "Top 10 Doctors":
   plt.xticks(rotation=45, ha='right')
   st.pyplot(fig)
 
-elif selected_query == "Top 10 Tests":
+elif selected_query == "Top Tests":
   query = '''SELECT Test, COUNT(*) as total_patients
             FROM all_data
             GROUP BY Test
