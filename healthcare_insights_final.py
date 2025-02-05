@@ -217,7 +217,7 @@ elif selected_query == "Top Doctors":
             ORDER BY total_patients DESC
             LIMIT 10'''
   df_doctor = pd.read_sql_query(query, conn)
-  st.subheader("Top 10 Doctors")
+  st.subheader("Top Doctors")
   fig, ax = plt.subplots(figsize=(10, 6))
   sns.barplot(x='Doctor', y='total_patients', data=df_doctor, ax=ax)
   plt.xticks(rotation=45, ha='right')
@@ -230,7 +230,7 @@ elif selected_query == "Top Tests":
             ORDER BY total_patients DESC
             LIMIT 10'''
   df_test = pd.read_sql_query(query, conn)
-  st.subheader("Top 10 Tests")
+  st.subheader("Top Tests")
   fig, ax = plt.subplots(figsize=(10, 6))
   sns.barplot(x='Test', y='total_patients', data=df_test, ax=ax)
   plt.xticks(rotation=45, ha='right')
