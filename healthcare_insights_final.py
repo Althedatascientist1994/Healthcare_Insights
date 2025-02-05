@@ -10,9 +10,9 @@ Original file is located at
 # !pip3 install streamlit
 # !pip3 install pandas
 # !pip3 install numpy
-install matplotlib
-!pip3 install seaborn
-!pip3 install sqlite3
+uv install matplotlib
+uv install seaborn
+uv install sqlite3
 
 # Import necessary libraries
 import pandas as pd
