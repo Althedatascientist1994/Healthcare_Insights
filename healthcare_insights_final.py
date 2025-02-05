@@ -7,9 +7,9 @@ Original file is located at
     https://colab.research.google.com/drive/1MSiny1wuWHe2tks69K9GYmOe_Ia_Fcaf
 """
 
-!pip3 install streamlit
-!pip3 install pandas
-!pip3 install numpy
+# !pip3 install streamlit
+# !pip3 install pandas
+# !pip3 install numpy
 !pip3 install matplotlib
 !pip3 install seaborn
 !pip3 install sqlite3
