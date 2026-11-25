@@ -7,6 +7,8 @@ Original file is located at
     https://colab.research.google.com/drive/1MSiny1wuWHe2tks69K9GYmOe_Ia_Fcaf
 """
 
+!pip install streamlit openpyxl
+
 # Import necessary libraries
 import pandas as pd
 import numpy as np
@@ -102,13 +104,13 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS non_na_data (
 conn.commit()
 
 #Creating queries for data
-query_all_data = '''INSERT INTO all_data (PatientID, AdmitDate, DischargeDate, Diagnosis, Bed_Occupancy, Test, Doctor, FollowupDate, Feedback, Billing_Amount, Health_Insurance_Amount)
+query_all_data = '''INSERT OR REPLACE INTO all_data (PatientID, AdmitDate, DischargeDate, Diagnosis, Bed_Occupancy, Test, Doctor, FollowupDate, Feedback, Billing_Amount, Health_Insurance_Amount)
 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'''
 
-query_followup_na = '''INSERT INTO followup_na_data (PatientID, AdmitDate, DischargeDate, Diagnosis, Bed_Occupancy, Test, Doctor, FollowupDate, Feedback, Billing_Amount, Health_Insurance_Amount)
+query_followup_na = '''INSERT OR REPLACE INTO followup_na_data (PatientID, AdmitDate, DischargeDate, Diagnosis, Bed_Occupancy, Test, Doctor, FollowupDate, Feedback, Billing_Amount, Health_Insurance_Amount)
 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'''
 
-query_non_na = '''INSERT INTO non_na_data (PatientID, AdmitDate, DischargeDate, Diagnosis, Bed_Occupancy, Test, Doctor, FollowupDate, Feedback, Billing_Amount, Health_Insurance_Amount)
+query_non_na = '''INSERT OR REPLACE INTO non_na_data (PatientID, AdmitDate, DischargeDate, Diagnosis, Bed_Occupancy, Test, Doctor, FollowupDate, Feedback, Billing_Amount, Health_Insurance_Amount)
 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'''
 
 query_list = [query_all_data, query_followup_na, query_non_na]
