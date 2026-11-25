@@ -7,8 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1MSiny1wuWHe2tks69K9GYmOe_Ia_Fcaf
 """
 
-!pip install streamlit openpyxl
-
 # Import necessary libraries
 import pandas as pd
 import numpy as np
